@@ -13,7 +13,7 @@ How to run:
 - Just open index.html in any browser.
 
 Folder Structure:
-- index.html
+- portfolio.html
 - style.css
 - script.js
 - /assets (images, icons, etc.)
