@@ -1,122 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthi | Portfolio Website</title>
+  <title>Karthikeyan A | AI & Full Stack Developer Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Karthikeyan A — IT student & developer at Easwari Engineering College building AI-powered web apps. Portfolio showcasing projects in Python, JavaScript, and cloud technologies.">
+  <meta name="keywords"
+    content="Karthikeyan, portfolio, frontend developer, AI developer, web developer, full stack, Python, React, MongoDB, India, Tamil Nadu">
+  <meta name="author" content="Karthikeyan A">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (for LinkedIn/WhatsApp sharing) -->
+  <meta property="og:title" content="Karthikeyan A | Developer Portfolio">
+  <meta property="og:description"
+    content="IT student building AI & full-stack projects. Hackathon participant. Passionate about tech.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Karthikeyan A.JPG">
+
+  <!-- Google Fonts — Poppins with all needed weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<style>
-  @media(max-width: 768px) {
-   
-    .menu-icon {
-      display: block;
-      
-    }
-  }
-</style>
+
 <body>
-  <header class="navbar">
-    <div class="logo">Karthi</div>
-    <div class="menu-icon" id="menu-icon">
-        &#9776;
-    </div>
-    <nav id="nav-menu">
-      <a href="#home">Home</a>
-      <a href="#about-me">About</a>
-      <a href="#project">Projects</a>
-      <a href="#skill">Skills</a>
-      <a href="#contact">Contact</a>
+
+  <!-- ═══════════════════ HEADER / NAV ═══════════════════ -->
+  <header class="navbar" id="header">
+    <a href="#home" class="logo" aria-label="Go to top">Karthi<span>.</span></a>
+
+    <nav id="nav-menu" role="navigation" aria-label="Main Navigation">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about-me" class="nav-link">About</a>
+      <a href="#skill" class="nav-link">Skills</a>
+      <a href="#project" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+
+    <div class="header-right">
+      <a href="karthi.pdf" class="resume-btn" id="resumeBtn" download="Karthikeyan_A_Resume.pdf">
+        <span>📄</span> Resume
+      </a>
+      <button class="menu-icon" id="menu-icon" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
+  <!-- ═══════════════════ HOME / HERO ═══════════════════ -->
   <section id="home" class="home">
     <div class="home-image fade-in">
-      <img src="photo.1.jpeg" alt="Portfolio Image">
+      <div class="img-glow-wrap">
+        <img src="Karthikeyan A.JPG" alt="Karthikeyan A — IT Student & Developer" loading="eager">
+      </div>
     </div>
+
     <div class="home-content fade-in delay-1">
+      <p class="greeting">👋 Hello, I'm</p>
       <h1>Karthikeyan A</h1>
-      <h2>Frontend Developer</h2>
-      <p>Welcome to my personal portfolio website</p>
+      <h2 class="typed-wrapper">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc">
+        IT student at <strong>Easwari Engineering College</strong> — building intelligent web applications that solve
+        real problems. Passionate about AI, cloud, and clean code.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-btns">
+        <a href="#project" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/karthi206" target="_blank" rel="noopener" aria-label="GitHub Profile"
+          class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/karthi-keyan-a-65332b341/" target="_blank" rel="noopener"
+          aria-label="LinkedIn Profile" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="mailto:karthi26062006@gmail.com" aria-label="Send Email" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="about-me" class="fade-in delay-2">
-    <h3>About Me</h3>
-    <p>
-      I'm Karthi, a passionate Frontend Developer currently pursuing my first year in Information Technology at Easwari Engineering College. I enjoy building clean, responsive websites and love learning new technologies. I'm focused on enhancing my skills in web development and cloud computing to create real-world applications.
-    </p>
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about-me" class="about-section">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm <strong>Karthikeyan A</strong>, an enthusiastic IT student at
+          <strong>Easwari Engineering College</strong> with a passion for web development and building
+          responsive, user-friendly websites. I completed my schooling at
+          <strong>Velammal Vidyalaya</strong>.
+        </p>
+        <p>
+          I'm seeking an <strong>internship</strong> to apply my technical skills and gain hands-on
+          experience in real-world projects. My main focus is <strong>AI and Cloud Computing</strong>,
+          with a stronger interest in <strong>AI</strong>. I'm actively exploring cloud computing
+          concepts and how they integrate with modern applications.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Hackathon Participated</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Tech Skills</span>
+          </div>
+        </div>
+
+        <div class="about-btns">
+          <a href="#project" class="btn btn-primary">See My Projects</a>
+          <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        </div>
+      </div>
+
+      <div class="about-right">
+
+
+        <div class="quick-info">
+          <div class="info-row">
+            <span class="info-icon">🎓</span>
+            <div>
+              <strong>Easwari Engineering College</strong>
+              <p>B.E. Information Technology · 2024–2028</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🏫</span>
+            <div>
+              <strong>Velammal Vidyalaya</strong>
+              <p>Schooling</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Chennai, Tamil Nadu</strong>
+              <p>Open to remote opportunities</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">💡</span>
+            <div>
+              <strong>Interested In</strong>
+              <p>AI · Cloud Computing · Web Dev</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="project" class="fade-in delay-3">
-    <h2>Projects</h2>
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section id="skill" class="skills-section">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Technologies and tools I work with</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h4 class="skill-cat-title">
+          <span class="cat-icon">🎨</span> Frontend
+        </h4>
+        <div class="skill-pills">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Responsive Design</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="skill-cat-title">
+          <span class="cat-icon">⚙️</span> Backend & DB
+        </h4>
+        <div class="skill-pills">
+          <span class="skill">Python</span>
+          <span class="skill">MongoDB</span>
+          <span class="skill">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="skill-cat-title">
+          <span class="cat-icon">💻</span> Languages
+        </h4>
+        <div class="skill-pills">
+          <span class="skill">Python</span>
+          <span class="skill">Java</span>
+          <span class="skill">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="skill-cat-title">
+          <span class="cat-icon">�️</span> Tools & Environment
+        </h4>
+        <div class="skill-pills">
+          <span class="skill">Git &amp; GitHub</span>
+          <span class="skill">VS Code</span>
+          <span class="skill">Linux</span>
+          <span class="skill">Ubuntu</span>
+          <span class="skill">PuTTY</span>
+          <span class="skill">AWS EC2</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section id="project" class="projects-section">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Things I've built — click any card to explore</p>
+    </div>
+
     <div class="project-list">
-      <div class="project">
-        <img src="career mentor ai.png" alt="Career Mentor AI">
+
+      <!-- FEATURED — Nova Bot -->
+      <div class="project-card featured-card" id="card-nova" role="button" tabindex="0" data-live="#"
+        data-github="https://github.com/karthi206/Nova_bot">
+        <div class="featured-badge">⭐ Featured · AI + Cloud Project</div>
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder">
+            <span class="proj-emoji">🤖</span>
+          </div>
+          <div class="project-overlay">
+            <a class="btn-overlay btn-outline" href="https://github.com/karthi206/Nova_bot" target="_blank"
+              rel="noopener" onclick="event.stopPropagation()">💻 View on GitHub</a>
+          </div>
+        </div>
         <div class="project-info">
-          <h3>Career Mentor AI</h3>
-          <p>An AI-powered career guidance platform designed to help users discover their ideal career path.</p>
-          <p>This was my first hackathon project, and I'm now working to develop it into a real-world application.</p>
-          <strong>Tech Stack:</strong> Frontend, Backend, AI Integration, Database,Auth & User Management,Cloud & Hosting
+          <h3>Nova – Hybrid AI Telegram Bot</h3>
+          <p>A hybrid AI-powered Telegram bot built with Python, deployed live on <strong>AWS EC2</strong>.
+            Combines fast rule-based deterministic commands with advanced LLM reasoning (GPT-4o-mini via
+            OpenRouter). Features short-term memory per user, multi-language support, rate limiting,
+            and a modular scalable architecture.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Telegram Bot API</span>
+            <span class="tag">OpenRouter / LLM</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">Ubuntu</span>
+            <span class="tag">aiohttp</span>
+          </div>
         </div>
       </div>
 
-      <div class="project">
-        <img src="smart budget tracker.png" alt="Smart Budget Tracker">
+      <!-- Terminal Student Management System -->
+      <div class="project-card featured-card" id="card-sms" role="button" tabindex="0" data-live="#"
+        data-github="https://github.com/karthi206/terminal-student-management-system">
+        <div class="featured-badge">🐍 Python · CLI Project</div>
+        <div class="project-img-wrap">
+          <div class="project-img-placeholder">
+            <span class="proj-emoji">🖥️</span>
+          </div>
+          <div class="project-overlay">
+            <a class="btn-overlay btn-outline" href="https://github.com/karthi206/terminal-student-management-system"
+              target="_blank" rel="noopener" onclick="event.stopPropagation()">💻 View on GitHub</a>
+          </div>
+        </div>
         <div class="project-info">
-          <h3>Smart Budget Tracker</h3>
-          <p>A web app to track expenses, set goals, and view monthly insights using charts.</p>
-          <strong>Tech Stack:</strong> HTML, CSS, JavaScript
+          <h3>Terminal Student Management System</h3>
+          <p>A simple Python command-line application to manage student records, designed to practice
+            Python fundamentals — <strong>functions, lists/dictionaries, loops, and I/O</strong>.
+            Features a menu-driven interface to Add, View, Search, Update, and Delete students.
+            Zero external dependencies — pure Python standard library only.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CLI</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Ubuntu</span>
+          </div>
         </div>
       </div>
 
-      <div class="project">
-        <img src="quick note.png" alt="QuickNotes App">
-        <div class="project-info">
-          <h3>QuickNotes App</h3>
-          <p>A minimalist note-taking app with dark mode and local storage support.</p>
-          <strong>Tech Stack:</strong> HTML, CSS, JavaScript
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="weather now.avif" alt="WeatherNow App">
-        <div class="project-info">
-          <h3>WeatherNow</h3>
-          <p>Real-time weather forecast using a public API. Great for learning API and DOM manipulation.</p>
-          <strong>Tech Stack:</strong> HTML, CSS, JavaScript (OpenWeatherMap API)
-        </div>
-      </div>
     </div>
   </section>
 
-  <section id="skill" class="fade-in delay-4">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li class="skill">HTML</li>
-      <li class="skill">CSS</li>
-      <li class="skill">JavaScript</li>
-      <li class="skill">Python</li>
-      <li class="skill">C Programming</li>
-      <li class="skill">Mongo DB</li>
-    </ul>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Have a project idea or opportunity? Let's talk.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's build something together</h3>
+        <p>I'm actively looking for internships, collaborations, and open-source opportunities. Feel free
+          to reach out — I usually respond within 24 hours.</p>
+
+        <div class="contact-links">
+          <a href="mailto:karthi26062006@gmail.com" class="contact-link-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>karthi26062006@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/karthi-keyan-a-65332b341/" target="_blank" rel="noopener"
+            class="contact-link-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>linkedin.com/in/karthi-keyan-a-65332b341</p>
+            </div>
+          </a>
+          <a href="https://github.com/karthi206" target="_blank" rel="noopener" class="contact-link-item">
+            <span class="contact-icon">💻</span>
+            <div>
+              <strong>GitHub</strong>
+              <p>github.com/karthi206</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Karthik Rajan" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." rows="5"
+            required></textarea>
+        </div>
+        <button type="submit" id="submitBtn">
+          <span class="btn-text">Send Message 🚀</span>
+          <span class="btn-loading" style="display:none;">Sending...</span>
+        </button>
+        <p id="thankYouMsg">✅ Message sent! I'll get back to you soon.</p>
+      </form>
+    </div>
   </section>
 
-  <section id="contact">
-    <h3>Contact</h3>
-    <form id="contactForm">
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="thankYouMsg">✅ Thank you! Your message has been sent.</p>
-  </section>
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Karthi<span>.</span></span>
+        <p>Building the future, one commit at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a>
+        <a href="#about-me">About</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h5>Find Me On</h5>
+        <a href="https://github.com/karthi206" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/karthi-keyan-a-65332b341/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:karthi26062006@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Karthikeyan A · Designed & Built with ❤️</p>
+    </div>
+  </footer>
 
-  <button id="scrollTopbtn" title="Scroll to top">⬆</button>
-  <button id="toggleMode" title="Toggle dark mode">🌙</button>
+  <!-- Fixed floating buttons -->
+  <button id="scrollTopbtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+  <button id="toggleMode" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
 
   <script src="script.js"></script>
-  
 </body>
+
 </html>
