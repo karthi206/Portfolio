@@ -184,7 +184,7 @@ const contactForm = document.getElementById('contactForm');
 const thankYouMsg = document.getElementById('thankYouMsg');
 
 if (contactForm && thankYouMsg) {
-  contactForm.addEventListener('submit', function (e) {
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const submitBtn = contactForm.querySelector('#submitBtn');
@@ -196,16 +196,34 @@ if (contactForm && thankYouMsg) {
     if (btnLoading) btnLoading.style.display = 'inline';
     submitBtn.disabled = true;
 
-    // Simulate async send (replace with actual fetch/emailjs in production)
-    setTimeout(() => {
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      
+      const data = await response.json();
+
+      if (data.success) {
+        thankYouMsg.style.display = 'block';
+        contactForm.reset();
+      } else {
+        thankYouMsg.textContent = '❌ Something went wrong! Please try again.';
+        thankYouMsg.style.display = 'block';
+      }
+    } catch (error) {
+      thankYouMsg.textContent = '❌ Something went wrong! Please try again.';
       thankYouMsg.style.display = 'block';
-      contactForm.reset();
+    } finally {
       if (btnText) btnText.style.display = 'inline';
       if (btnLoading) btnLoading.style.display = 'none';
       submitBtn.disabled = false;
-
-      setTimeout(() => { thankYouMsg.style.display = 'none'; }, 6000);
-    }, 1200);
+      setTimeout(() => { 
+        thankYouMsg.style.display = 'none';
+        thankYouMsg.textContent = '✅ Message sent! I\'ll get back to you soon.'; 
+      }, 6000);
+    }
   });
 }
 
